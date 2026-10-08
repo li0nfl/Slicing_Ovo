@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'profile_page.dart'; // supaya bisa pindah ke halaman Profile
+import 'profile_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,16 +8,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(), // halaman pertama yang muncul
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage());
   }
 }
 
-// ============================================
-// HALAMAN HOME
-// ============================================
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,7 +21,6 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // ---------- BARIS ATAS: logo OVO & tombol Promo ----------
               Padding(
                 padding: EdgeInsets.all(16),
                 child: Row(
@@ -42,8 +35,10 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 10,
+                      ),
                       decoration: BoxDecoration(
                         color: Color(0xFFB9A6EC),
                         borderRadius: BorderRadius.circular(20),
@@ -65,8 +60,6 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-
-              // ---------- KARTU SALDO OVO CASH ----------
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 16),
                 padding: EdgeInsets.all(16),
@@ -90,8 +83,10 @@ class HomePage extends StatelessWidget {
                     SizedBox(height: 8),
                     Row(
                       children: [
-                        Text('Total Saldo ',
-                            style: TextStyle(color: Colors.white)),
+                        Text(
+                          'Total Saldo ',
+                          style: TextStyle(color: Colors.white),
+                        ),
                         Icon(Icons.visibility, color: Colors.white, size: 16),
                       ],
                     ),
@@ -107,10 +102,11 @@ class HomePage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        // tombol OVO Points
                         Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 8,
+                          ),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20),
@@ -123,7 +119,9 @@ class HomePage extends StatelessWidget {
                                 child: Text(
                                   'P',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 11),
+                                    color: Colors.white,
+                                    fontSize: 11,
+                                  ),
                                 ),
                               ),
                               SizedBox(width: 6),
@@ -134,56 +132,78 @@ class HomePage extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              Icon(Icons.chevron_right,
-                                  color: Color(0xFF4C2A9B), size: 18),
+                              Icon(
+                                Icons.chevron_right,
+                                color: Color(0xFF4C2A9B),
+                                size: 18,
+                              ),
                             ],
                           ),
                         ),
                       ],
                     ),
                     SizedBox(height: 20),
-
-                    // 4 tombol aksi: Top Up, Transfer, Tarik Tunai, History
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
-                            Icon(Icons.add_circle,
-                                color: Colors.white, size: 28),
+                            Icon(
+                              Icons.add_circle,
+                              color: Colors.white,
+                              size: 28,
+                            ),
                             SizedBox(height: 6),
-                            Text('Top Up',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 13)),
+                            Text(
+                              'Top Up',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                              ),
+                            ),
                           ],
                         ),
                         Column(
                           children: [
-                            Icon(Icons.arrow_circle_up,
-                                color: Colors.white, size: 28),
+                            Icon(
+                              Icons.arrow_circle_up,
+                              color: Colors.white,
+                              size: 28,
+                            ),
                             SizedBox(height: 6),
-                            Text('Transfer',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 13)),
+                            Text(
+                              'Transfer',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                              ),
+                            ),
                           ],
                         ),
                         Column(
                           children: [
                             Icon(Icons.download, color: Colors.white, size: 28),
                             SizedBox(height: 6),
-                            Text('Tarik Tunai',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 13)),
+                            Text(
+                              'Tarik Tunai',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                              ),
+                            ),
                           ],
                         ),
                         Column(
                           children: [
-                            Icon(Icons.list_alt,
-                                color: Colors.white, size: 28),
+                            Icon(Icons.list_alt, color: Colors.white, size: 28),
                             SizedBox(height: 6),
-                            Text('History',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 13)),
+                            Text(
+                              'History',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                              ),
+                            ),
                           ],
                         ),
                       ],
@@ -191,10 +211,7 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-
               SizedBox(height: 16),
-
-              // ---------- BAGIAN PUTIH (isi utama) ----------
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.all(16),
@@ -208,7 +225,6 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Kartu "Cek data kamu"
                     Container(
                       padding: EdgeInsets.all(14),
                       decoration: BoxDecoration(
@@ -219,7 +235,6 @@ class HomePage extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              // gambar dari internet
                               Image.network(
                                 'https://picsum.photos/id/237/100/100',
                                 width: 50,
@@ -244,7 +259,9 @@ class HomePage extends StatelessWidget {
                                 backgroundColor: Color(0xFF4C2A9B),
                                 foregroundColor: Colors.white,
                                 padding: EdgeInsets.symmetric(
-                                    horizontal: 40, vertical: 14),
+                                  horizontal: 40,
+                                  vertical: 14,
+                                ),
                               ),
                               child: Text('Cek'),
                             ),
@@ -252,16 +269,15 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-
                     SizedBox(height: 16),
-
-                    // Tab menu: Favorit, Finansial, Hiburan, Pilihan Lain
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 14,
+                            vertical: 8,
+                          ),
                           decoration: BoxDecoration(
                             color: Colors.grey[200],
                             borderRadius: BorderRadius.circular(20),
@@ -276,18 +292,16 @@ class HomePage extends StatelessWidget {
                         ),
                         Text('Finansial', style: TextStyle(color: Colors.grey)),
                         Text('Hiburan', style: TextStyle(color: Colors.grey)),
-                        Text('Pilihan Lain',
-                            style: TextStyle(color: Colors.grey)),
+                        Text(
+                          'Pilihan Lain',
+                          style: TextStyle(color: Colors.grey),
+                        ),
                       ],
                     ),
-
                     SizedBox(height: 24),
-
-                    // ---------- MENU BARIS PERTAMA ----------
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        // Menu 1: Nabung by Superbank (ada label BARU)
                         SizedBox(
                           width: 80,
                           child: Column(
@@ -302,15 +316,20 @@ class HomePage extends StatelessWidget {
                                       color: Color(0xFFE6DDF7),
                                       shape: BoxShape.circle,
                                     ),
-                                    child: Icon(Icons.savings,
-                                        color: Colors.black87, size: 28),
+                                    child: Icon(
+                                      Icons.savings,
+                                      color: Colors.black87,
+                                      size: 28,
+                                    ),
                                   ),
                                   Positioned(
                                     top: -6,
                                     left: 4,
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 6, vertical: 2),
+                                        horizontal: 6,
+                                        vertical: 2,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: Colors.red,
                                         borderRadius: BorderRadius.circular(4),
@@ -336,8 +355,6 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                         ),
-
-                        // Menu 2: Pinjaman (ada label 100JT)
                         SizedBox(
                           width: 80,
                           child: Column(
@@ -352,15 +369,20 @@ class HomePage extends StatelessWidget {
                                       color: Color(0xFFE6DDF7),
                                       shape: BoxShape.circle,
                                     ),
-                                    child: Icon(Icons.currency_exchange,
-                                        color: Colors.black87, size: 28),
+                                    child: Icon(
+                                      Icons.currency_exchange,
+                                      color: Colors.black87,
+                                      size: 28,
+                                    ),
                                   ),
                                   Positioned(
                                     top: -6,
                                     left: 4,
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 6, vertical: 2),
+                                        horizontal: 6,
+                                        vertical: 2,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: Colors.red,
                                         borderRadius: BorderRadius.circular(4),
@@ -386,8 +408,6 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                         ),
-
-                        // Menu 3: Uang Elektronik (ada label Rp 1)
                         SizedBox(
                           width: 80,
                           child: Column(
@@ -402,15 +422,20 @@ class HomePage extends StatelessWidget {
                                       color: Color(0xFFFFE8D6),
                                       shape: BoxShape.circle,
                                     ),
-                                    child: Icon(Icons.wallet,
-                                        color: Colors.black87, size: 28),
+                                    child: Icon(
+                                      Icons.wallet,
+                                      color: Colors.black87,
+                                      size: 28,
+                                    ),
                                   ),
                                   Positioned(
                                     top: -6,
                                     left: 4,
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 6, vertical: 2),
+                                        horizontal: 6,
+                                        vertical: 2,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: Colors.red,
                                         borderRadius: BorderRadius.circular(4),
@@ -436,8 +461,6 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                         ),
-
-                        // Menu 4: Angsuran Kredit (tanpa label)
                         SizedBox(
                           width: 80,
                           child: Column(
@@ -449,8 +472,11 @@ class HomePage extends StatelessWidget {
                                   color: Color(0xFFFFD9E3),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Icon(Icons.receipt_long,
-                                    color: Colors.black87, size: 28),
+                                child: Icon(
+                                  Icons.receipt_long,
+                                  color: Colors.black87,
+                                  size: 28,
+                                ),
                               ),
                               SizedBox(height: 8),
                               Text(
@@ -463,14 +489,10 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-
                     SizedBox(height: 24),
-
-                    // ---------- MENU BARIS KEDUA ----------
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        // Menu 5: Pulsa/Paket Data (ada label PROMO)
                         SizedBox(
                           width: 80,
                           child: Column(
@@ -485,15 +507,20 @@ class HomePage extends StatelessWidget {
                                       color: Color(0xFFD6E6FF),
                                       shape: BoxShape.circle,
                                     ),
-                                    child: Icon(Icons.phone_android,
-                                        color: Colors.black87, size: 28),
+                                    child: Icon(
+                                      Icons.phone_android,
+                                      color: Colors.black87,
+                                      size: 28,
+                                    ),
                                   ),
                                   Positioned(
                                     top: -6,
                                     left: 4,
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 6, vertical: 2),
+                                        horizontal: 6,
+                                        vertical: 2,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: Colors.red,
                                         borderRadius: BorderRadius.circular(4),
@@ -519,8 +546,6 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                         ),
-
-                        // Menu 6: PLN (ada label PROMO)
                         SizedBox(
                           width: 80,
                           child: Column(
@@ -535,15 +560,20 @@ class HomePage extends StatelessWidget {
                                       color: Color(0xFFFFEFD0),
                                       shape: BoxShape.circle,
                                     ),
-                                    child: Icon(Icons.bolt,
-                                        color: Colors.black87, size: 28),
+                                    child: Icon(
+                                      Icons.bolt,
+                                      color: Colors.black87,
+                                      size: 28,
+                                    ),
                                   ),
                                   Positioned(
                                     top: -6,
                                     left: 4,
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 6, vertical: 2),
+                                        horizontal: 6,
+                                        vertical: 2,
+                                      ),
                                       decoration: BoxDecoration(
                                         color: Colors.red,
                                         borderRadius: BorderRadius.circular(4),
@@ -569,8 +599,6 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                         ),
-
-                        // Menu 7: Air PDAM (tanpa label)
                         SizedBox(
                           width: 80,
                           child: Column(
@@ -582,8 +610,11 @@ class HomePage extends StatelessWidget {
                                   color: Color(0xFFD6EEFF),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Icon(Icons.water_drop,
-                                    color: Colors.black87, size: 28),
+                                child: Icon(
+                                  Icons.water_drop,
+                                  color: Colors.black87,
+                                  size: 28,
+                                ),
                               ),
                               SizedBox(height: 8),
                               Text(
@@ -594,8 +625,6 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                         ),
-
-                        // Menu 8: Internet & TV Kabel (tanpa label)
                         SizedBox(
                           width: 80,
                           child: Column(
@@ -607,8 +636,11 @@ class HomePage extends StatelessWidget {
                                   color: Color(0xFFFFE0D6),
                                   shape: BoxShape.circle,
                                 ),
-                                child: Icon(Icons.tv,
-                                    color: Colors.black87, size: 28),
+                                child: Icon(
+                                  Icons.tv,
+                                  color: Colors.black87,
+                                  size: 28,
+                                ),
                               ),
                               SizedBox(height: 8),
                               Text(
@@ -621,10 +653,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-
                     SizedBox(height: 24),
-
-                    // Banner promo (gambar dari internet)
                     ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: Image.network(
@@ -642,8 +671,6 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-
-      // ---------- MENU BAWAH ----------
       bottomNavigationBar: Container(
         padding: EdgeInsets.only(top: 10, bottom: 20),
         decoration: BoxDecoration(
@@ -654,7 +681,6 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            // Tombol Home (sedang di halaman Home, jadi warnanya ungu)
             GestureDetector(
               onTap: () {},
               child: Column(
@@ -673,23 +699,24 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-
-            // Tombol Finance
             GestureDetector(
               onTap: () {},
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.account_balance_wallet,
-                      color: Colors.grey, size: 28),
+                  Icon(
+                    Icons.account_balance_wallet,
+                    color: Colors.grey,
+                    size: 28,
+                  ),
                   SizedBox(height: 4),
-                  Text('Finance',
-                      style: TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text(
+                    'Finance',
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
-
-            // Tombol Pay (lingkaran ungu besar)
             GestureDetector(
               onTap: () {},
               child: Column(
@@ -714,12 +741,13 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 4),
-                  Text('Pay', style: TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text(
+                    'Pay',
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
-
-            // Tombol Inbox (ada angka 36)
             GestureDetector(
               onTap: () {},
               child: Column(
@@ -733,8 +761,10 @@ class HomePage extends StatelessWidget {
                         top: -6,
                         right: -10,
                         child: Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 5,
+                            vertical: 2,
+                          ),
                           decoration: BoxDecoration(
                             color: Colors.red,
                             borderRadius: BorderRadius.circular(10),
@@ -752,13 +782,13 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 4),
-                  Text('Inbox',
-                      style: TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text(
+                    'Inbox',
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
-
-            // Tombol Profile -> pindah ke ProfilePage pakai Navigator.push
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -771,8 +801,10 @@ class HomePage extends StatelessWidget {
                 children: [
                   Icon(Icons.account_circle, color: Colors.grey, size: 28),
                   SizedBox(height: 4),
-                  Text('Profile',
-                      style: TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text(
+                    'Profile',
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
