@@ -42,9 +42,11 @@ class ProfilePage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'amalia ramadhanty',
+                            'Lionel Janitra',
                             style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           SizedBox(height: 4),
                           Text('0813-3167-1057'),
@@ -54,7 +56,9 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       'Ubah',
                       style: TextStyle(
-                          color: Colors.blue, fontWeight: FontWeight.bold),
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ],
                 ),
@@ -77,8 +81,10 @@ class ProfilePage extends StatelessWidget {
                     SizedBox(width: 12),
                     Text(
                       'Loyalty Code',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ],
                 ),
@@ -103,12 +109,16 @@ class ProfilePage extends StatelessWidget {
                       child: Text(
                         'OVO Premier',
                         style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 24, vertical: 10),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 24,
+                        vertical: 10,
+                      ),
                       decoration: BoxDecoration(
                         color: Color(0xFF4C2A9B),
                         borderRadius: BorderRadius.circular(20),
@@ -116,7 +126,9 @@ class ProfilePage extends StatelessWidget {
                       child: Text(
                         'Upgrade',
                         style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],
@@ -135,7 +147,9 @@ class ProfilePage extends StatelessWidget {
                       child: Text(
                         'OVO Points',
                         style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     Icon(Icons.chevron_right),
@@ -155,7 +169,9 @@ class ProfilePage extends StatelessWidget {
                       child: Text(
                         'OVO Stamp',
                         style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     Icon(Icons.chevron_right),
@@ -175,11 +191,16 @@ class ProfilePage extends StatelessWidget {
                       child: Text(
                         'Aplikasi Terhubung',
                         style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 4,
+                      ),
                       decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(12),
@@ -217,7 +238,9 @@ class ProfilePage extends StatelessWidget {
                       child: Text(
                         'Pusat Bantuan',
                         style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     Icon(Icons.chevron_right),
@@ -263,8 +286,10 @@ class ProfilePage extends StatelessWidget {
                 children: [
                   Icon(Icons.home, color: Colors.grey, size: 28),
                   SizedBox(height: 4),
-                  Text('Home',
-                      style: TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text(
+                    'Home',
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
@@ -275,11 +300,16 @@ class ProfilePage extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.account_balance_wallet,
-                      color: Colors.grey, size: 28),
+                  Icon(
+                    Icons.account_balance_wallet,
+                    color: Colors.grey,
+                    size: 28,
+                  ),
                   SizedBox(height: 4),
-                  Text('Finance',
-                      style: TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text(
+                    'Finance',
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
@@ -309,7 +339,10 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 4),
-                  Text('Pay', style: TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text(
+                    'Pay',
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
@@ -328,8 +361,10 @@ class ProfilePage extends StatelessWidget {
                         top: -6,
                         right: -10,
                         child: Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 5,
+                            vertical: 2,
+                          ),
                           decoration: BoxDecoration(
                             color: Colors.red,
                             borderRadius: BorderRadius.circular(10),
@@ -347,8 +382,10 @@ class ProfilePage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 4),
-                  Text('Inbox',
-                      style: TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text(
+                    'Inbox',
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
@@ -359,8 +396,11 @@ class ProfilePage extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.account_circle,
-                      color: Color(0xFF4C2A9B), size: 28),
+                  Icon(
+                    Icons.account_circle,
+                    color: Color(0xFF4C2A9B),
+                    size: 28,
+                  ),
                   SizedBox(height: 4),
                   Text(
                     'Profile',
